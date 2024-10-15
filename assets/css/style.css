@@ -95,6 +95,7 @@ a + p{
 }*/
 
 
+
 .post > ol{
 	padding-left: 24px;
 }
@@ -158,6 +159,13 @@ a + p{
 	right: 3px;
 	top: -2.5px;
 	text-align: right;
+}
+
+.blur{
+	filter: blur(4px);
+  user-select: none;
+  pointer-events: none;
+  color: red !important;
 }
 
 .submission-00 > p > img, 
