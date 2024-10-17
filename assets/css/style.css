@@ -136,6 +136,9 @@ a + p{
 .submissions > .post > p{
 	text-align: center;
 	margin: 10px 0;
+	word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;  
 }
 
 
@@ -176,6 +179,7 @@ a + p{
  
 .submissions > .post > p > img{
 	max-width: 200px;
+
 }
 
 .submission-00 > p > img{
