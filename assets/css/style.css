@@ -45,6 +45,10 @@ h1, h1 > a{
 	text-decoration: none;
 }
 
+.post > h1 > a {
+	text-decoration: underline;
+}
+
 h5{
 	font-size: 1rem;
 	font-weight: normal;
@@ -169,11 +173,20 @@ a + p{
   color: red !important;
 }
 
-.submission-00 > p > img, 
+ 
 .submissions > .post > p > img{
 	max-width: 200px;
 }
 
+.submission-00 > p > img{
+	width: 300px;
+
+}
+
+
+.no-underline{
+	text-decoration: none !important;
+}
 
 @media screen and (max-width: 900px){
 	*{
@@ -185,7 +198,7 @@ a + p{
 		padding: 3px 2px 0px;
 		left: 0;
 		text-align: left;
-		font-weight: 900;
+	/*font-weight: 900;*/
 		letter-spacing: .5px;
 	}
 	.sticky{
@@ -193,7 +206,7 @@ a + p{
   }
 
 	.post-1 {
-		flex: 0 0 145px;
+		display: none;
 	}
 
 }
