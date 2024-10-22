@@ -45,6 +45,12 @@ h1, h1 > a{
 	text-decoration: none;
 }
 
+h3{
+	text-transform: uppercase;
+	margin: 0;
+	font-weight: normal;
+}
+
 .post > h1 > a {
 	text-decoration: underline;
 }
@@ -107,9 +113,32 @@ a + p{
 
 .posts{
 	display: flex; 
-	overflow-x: auto;
+/*	overflow-x: auto;*/
   gap: 20px;
-/*  justify-content: space-between;*/
+}
+
+.posts.category {
+	display: flex;
+	overflow-x: hidden;
+	flex-wrap: wrap;
+}
+
+
+
+.linklist > .post > p{
+	margin-top: 0;
+}
+
+.linklist{
+	flex-wrap: wrap;
+}
+
+.linklist > .post, .linklist > .post > p{
+	flex-basis: auto; /* Passt sich der Größe des Inhalts an */
+  max-width: 100%; /* Begrenze die Breite auf den verfügbaren Raum */
+  white-space: normal; /* Erlaubt Umbrüche im Text */
+  word-wrap: break-word; /* Lange Wörter umbrechen */
+  overflow-wrap: break-word; /* Unterstützt das Umbruchverhalten */
 }
 
 .submissions{
@@ -126,9 +155,14 @@ a + p{
 
 
 
-.post{
+.assignment.post{
 	flex: 0 0 640px;
+	word-wrap: break-word;
+/*  overflow-wrap: break-word;*/
+  white-space: normal;  
 }
+
+
 
 .submissions > .post{
 	flex: inherit;
@@ -139,6 +173,10 @@ a + p{
 	word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;  
+}
+
+.category > .post > p, .category > p {
+	margin: 0;
 }
 
 
@@ -187,6 +225,9 @@ a + p{
 
 }
 
+p:empty {
+  display: none;
+}
 
 .no-underline{
 	text-decoration: none !important;
