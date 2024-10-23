@@ -225,6 +225,13 @@ a + p{
 
 }
 
+pre, code{
+	font-family: "Courier New","Courier", monospace;
+	background-color: linen;
+	display: inline;
+	font-size: .9rem;
+}
+
 p:empty {
   display: none;
 }
