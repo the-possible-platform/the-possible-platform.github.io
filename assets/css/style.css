@@ -124,7 +124,6 @@ a + p{
 }
 
 
-
 .linklist > .post > p{
 	margin-top: 0;
 }
@@ -223,6 +222,13 @@ a + p{
 .submission-00 > p > img{
 	width: 300px;
 
+}
+
+.added_by{
+	display: inline;
+	font-size: 0.7rem;
+	vertical-align: super;
+	letter-spacing: .5px;
 }
 
 pre, code{
