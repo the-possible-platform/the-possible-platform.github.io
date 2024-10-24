@@ -12,6 +12,9 @@
 	font-size: 24px;
 	text-decoration-thickness: 1px !important;
 	text-underline-offset: 3px !important;
+	text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 
 }
 
