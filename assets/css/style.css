@@ -75,6 +75,7 @@ h5{
 }
 
 iframe{
+	display: block;
 		width: auto;
     height: 95vh;
     border: none;
@@ -82,7 +83,7 @@ iframe{
 
  .image{
  	   height: auto;
-
+ 	   padding-bottom: 5px;
  }
 
 
@@ -118,11 +119,19 @@ a + p{
 	display: inline;
 }
 
-/*.post > p{
-	margin: 1rem 0;
-}*/
+.centered{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.post > p{
+	text-align: left;
+}
 
+.img{
+
+}
 
 .post > ol{
 	padding-left: 24px;
@@ -183,7 +192,7 @@ a + p{
 .submissions > .post{
 	flex: inherit;
 }
-.submissions > .post > p{
+.submissions > .post > img{
 	text-align: center;
 	margin: 10px 0;
 	word-wrap: break-word;
