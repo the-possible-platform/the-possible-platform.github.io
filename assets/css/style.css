@@ -129,9 +129,23 @@ a + p{
 	text-align: left;
 }
 
+.minutes > p{
+	margin: 0 0 1.2em;
+}
+
 .img{
 
 }
+
+.minutes > li{
+	list-style-type: none;
+}
+
+.assignment > ul,
+.assignment > li{
+	list-style-type: initial;
+}
+
 
 .post > ol{
 	padding-left: 24px;
@@ -141,6 +155,11 @@ a + p{
 	display: flex; 
 /*	overflow-x: auto;*/
   gap: 20px;
+}
+
+.list{
+	display: flex;
+	flex-direction: row;
 }
 
 .posts.category {
@@ -271,6 +290,34 @@ p:empty {
 .no-underline{
 	text-decoration: none !important;
 }
+
+.hover-link::before {
+	content: none;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    background-color: linen;
+/*    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto; /* Standardbreite */
+    height: auto; /* Standardhöhe */
+    z-index: 0;
+}
+
+.hover-link:hover::before {
+	content: "";
+	position: fixed;
+		width: 80%;
+    height: 80%;
+    object-fit: cover; 
+    background-image: var(--background-image);  /* Verwende die CSS-Variable für das Bild */
+    background-position: center;  /* Zentriere das Bild */
+    z-index: -1;  /* Stelle sicher, dass das Bild über anderen Elementen liegt */
+
+}
+
+
 
 @media screen and (max-width: 900px){
 	*{
