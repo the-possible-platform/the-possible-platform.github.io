@@ -56,6 +56,11 @@ h3{
 	text-decoration: underline;
 }
 
+.minutes > p {
+	display: inline;
+	margin: 0;
+}
+
 h5{
 	font-size: 1rem;
 	font-weight: normal;
@@ -129,7 +134,7 @@ a + p{
 	text-align: left;
 }
 
-.minutes > p{
+.minutes > p > a{
 	margin: 0 0 1.2em;
 }
 
