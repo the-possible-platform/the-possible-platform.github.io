@@ -124,11 +124,17 @@ a + p{
 	display: inline;
 }
 
+.links{
+	display: block;
+}
+
 .centered{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
+
 
 .post > p{
 	text-align: left;
