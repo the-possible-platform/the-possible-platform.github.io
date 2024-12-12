@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Difficult but Possible Platform — </title>
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+  </head>
+    <div class="pattern"></div>
+<div class="wrapper">
+<div class="meta">
+            <h1>Labor <i>Let’s Platform</i> Wintersemester 2024/25</h1>
+          </div>
+  
+    <h1><a href="/"><i class="no-underline">The <s>Difficult but </s>Possible Platform</i></a></h1>
+
+
+
+  
+
+
+
+
+  <body>
+
+    <main>
+    <p>Das Problem, dass <code>Node.js</code> und <code>nvm</code> in einem neuen Terminal-Fenster &quot;vergessen&quot; werden, liegt oft daran, dass die Umgebungsvariablen oder Konfigurationen in deinem Shell-Startup-Skript (<code>.bashrc</code>, <code>.zshrc</code>, etc.) nicht richtig gesetzt oder geladen werden.</p>
+<p>Hier sind die Schritte, um das Problem zu beheben:</p>
+<hr>
+<h3>1. <strong>Überprüfe, ob <code>nvm</code> richtig installiert ist</strong></h3>
+<p>Nach der Installation von <code>nvm</code> wird normalerweise eine Zeile zu deiner Shell-Startup-Datei (<code>~/.bashrc</code>, <code>~/.zshrc</code>, oder <code>~/.bash_profile</code>) hinzugefügt. Überprüfe, ob das der Fall ist:</p>
+<h4>Beispiel für <code>.bashrc</code> oder <code>.zshrc</code>:</h4>
+<pre><code class="language-bash">export NVM_DIR=&quot;$HOME/.nvm&quot;
+[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot; # NVM
+[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot; # Optional
+</code></pre>
+<ul>
+<li>Wenn diese Zeilen fehlen, füge sie manuell hinzu.</li>
+<li>Danach: <strong>Lade die Shell-Konfiguration neu</strong>:<pre><code class="language-bash">source ~/.bashrc   # Für Bash
+source ~/.zshrc    # Für Zsh
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3>2. <strong>Überprüfe, ob <code>nvm</code> in einem neuen Terminal verfügbar ist</strong></h3>
+<p>Schließe das Terminal und öffne ein neues. Gib dann Folgendes ein:</p>
+<pre><code class="language-bash">command -v nvm
+</code></pre>
+<ul>
+<li>Wenn <code>nvm</code> nicht gefunden wird, ist die Konfiguration nicht richtig geladen.</li>
+<li>Wenn <code>nvm</code> gefunden wird, fahre mit Schritt 3 fort.</li>
+</ul>
+<hr>
+<h3>3. <strong>Stelle sicher, dass <code>Node.js</code> über <code>nvm</code> installiert ist</strong></h3>
+<p>Installiere <code>Node.js</code> erneut mit <code>nvm</code>:</p>
+<pre><code class="language-bash">nvm install node   # Installiert die neueste Node.js-Version
+nvm use node       # Nutzt die neueste Version in der aktuellen Session
+nvm alias default node # Setzt die neueste Version als Standard
+</code></pre>
+<p>Das <code>nvm alias default node</code> sorgt dafür, dass die Version beim Start neuer Terminals automatisch genutzt wird.</p>
+<hr>
+<h3>4. <strong>Überprüfe, ob <code>node</code> in einem neuen Terminal verfügbar ist</strong></h3>
+<p>Schließe das Terminal, öffne es erneut, und prüfe:</p>
+<pre><code class="language-bash">node -v
+nvm ls
+</code></pre>
+<ul>
+<li>Wenn Node.js verfügbar ist, funktioniert die Installation korrekt.</li>
+<li>Wenn nicht, überprüfe, ob du eine andere Shell oder eine spezielle Konfiguration verwendest (z. B. <code>fish</code> oder ein Terminal-Plugin wie <code>Oh My Zsh</code>).</li>
+</ul>
+<hr>
+<h3>5. <strong>Spezialfälle und Workarounds</strong></h3>
+<h4>a. <strong>Oh My Zsh</strong></h4>
+<p>Wenn du <code>Oh My Zsh</code> verwendest, stelle sicher, dass die NVM-Konfiguration in deiner <code>.zshrc</code> korrekt ist (siehe Schritt 1). Außerdem kannst du ein Plugin wie <code>zsh-nvm</code> verwenden:</p>
+<pre><code class="language-bash">git clone https://github.com/lukechilds/zsh-nvm.git ~/.oh-my-zsh/custom/plugins/zsh-nvm
+</code></pre>
+<p>Dann füge <code>zsh-nvm</code> zu deinen Plugins in der <code>.zshrc</code> hinzu:</p>
+<pre><code class="language-bash">plugins=(git zsh-nvm)
+</code></pre>
+<p>Danach:</p>
+<pre><code class="language-bash">source ~/.zshrc
+</code></pre>
+<h4>b. <strong>Persistente Node.js-Installation ohne nvm</strong></h4>
+<p>Wenn du keine Lust auf <code>nvm</code> hast, installiere <code>Node.js</code> global über einen Paketmanager wie <code>apt</code> (Ubuntu) oder <code>brew</code> (MacOS):</p>
+<pre><code class="language-bash"># Ubuntu
+sudo apt update
+sudo apt install nodejs npm
+
+# MacOS
+brew install node
+</code></pre>
+<hr>
+<h3>6. <strong>Debugging</strong></h3>
+<p>Falls es immer noch nicht funktioniert, prüfe, ob ein Konflikt mit Pfaden besteht:</p>
+<pre><code class="language-bash">echo $PATH
+</code></pre>
+<p>Stelle sicher, dass der Pfad zu <code>nvm</code> oder Node.js korrekt in deinem <code>PATH</code> enthalten ist (z. B. <code>$HOME/.nvm</code>).</p>
+<p>Falls es immer noch nicht funktioniert, lass mich wissen, welches Betriebssystem und welche Shell du verwendest, und wir können das genauer untersuchen. 😊</p>
+
+
+
+
+</div>
