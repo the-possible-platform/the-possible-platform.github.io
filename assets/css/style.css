@@ -4,7 +4,7 @@
   }
 
 *{
-	font-family: Whole Earth Modern;
+	font-family: Computer Modern;
 	color: var(--primary-color);
 	box-sizing: border-box;
 /*	margin: 0;*/
@@ -41,7 +41,7 @@ a{
 
 }
 
-h1, h1 > a{
+i, h1, h1 > a{
 	font-weight: normal;
 	text-decoration: none;
 }
@@ -305,7 +305,7 @@ padding-right: 3px;
 }
 
 pre, code{
-	font-family: "Courier New","Courier", monospace;
+	font-family: "Courier New", monospace;
 	background-color: linen;
 	display: inline;
 	font-size: .9rem;
