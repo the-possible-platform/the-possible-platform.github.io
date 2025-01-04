@@ -7,6 +7,7 @@
     <title>The Difficult but Possible Platform — </title>
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   </head>
     <div class="pattern"></div>
@@ -67,4 +68,21 @@
 </div>
 
 </div>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+
+</html>
+
 
